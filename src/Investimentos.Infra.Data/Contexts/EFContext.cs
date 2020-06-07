@@ -12,6 +12,5 @@ namespace Investimentos.Infra.Data.Contexts
         {
 
         }
-    {
     }
 }
