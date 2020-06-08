@@ -9,6 +9,7 @@
 - Dapper (?)
 - MySQL
 - Angular (?)
+- Hangfire
 
 ### Tópicos para estudo
 - Migrations
