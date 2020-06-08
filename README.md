@@ -19,7 +19,7 @@
     - Interfaces que revelam a intenção - EVANS (2004)
     - Validações com Notification Pattern
         - Flunt (?)
-    - Domain, Subdomains e Bounded Contexts?
+    - Domain, Subdomains e Bounded Contexts (?)
 - Persistência com Repository e Unit of Work Patterns
 - Testes em todas as camadas
 - AutoMapper
