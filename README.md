@@ -9,6 +9,7 @@
 - Dapper (?)
 - MySQL
 - Angular (?)
+- Hangfire
 
 ### Tópicos para estudo
 - Migrations
@@ -19,8 +20,9 @@
     - Interfaces que revelam a intenção - EVANS (2004)
     - Validações com Notification Pattern
         - Flunt (?)
-    - Domain, Subdomains e Bounded Contexts?
+    - Domain, Subdomains e Bounded Contexts (?)
 - Persistência com Repository e Unit of Work Patterns
+- Autenticação - JWT ou Basic Authentication (?)
 - Testes em todas as camadas
 - AutoMapper
 - Miniprofiler
@@ -37,6 +39,7 @@
 - https://medium.com/@ericandrade_24404/parte-01-criando-arquitetura-em-camadas-com-ddd-inje%C3%A7%C3%A3o-de-dep-ef-60b851c88461
 - https://medium.com/@alexalvess/criando-uma-api-em-net-core-baseado-na-arquitetura-ddd-2c6a409c686 (tem alguns erros de design, mas pode ser uma boa referência para alguns pontos)
 - https://medium.com/@alexalvess/configurando-migrations-no-ef-core-com-mysql-e8f33619c268 (migrations com mysql)
+- https://codeburst.io/adding-basic-authentication-to-an-asp-net-core-web-api-project-5439c4cf78ee (basic auth)
 
 ## Referências de projetos
 - https://github.com/andrebaltieri/SimpleRoomBookingCore
