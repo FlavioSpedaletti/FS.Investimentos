@@ -2,7 +2,7 @@
 
 namespace Investimentos.Domain.Entities
 {
-    public abstract class Entity : Notifiable
+    public abstract class EntityBase : Notifiable
     {
         public int Id { get; set; }
     }
