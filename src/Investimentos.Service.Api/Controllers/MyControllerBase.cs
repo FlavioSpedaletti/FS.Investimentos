@@ -20,10 +20,6 @@ namespace Investimentos.Service.Api.Controllers
         private readonly IServiceBase<Entity> _service;
         private readonly IMapper _mapper;
 
-        //*******************************************************************
-        //TODO: async, usar o _logger, uow
-        //*******************************************************************
-
         public MyControllerBase(ILogger<AtivoRendaVariavelController> logger, IServiceBase<Entity> service, IMapper mapper)
         {
             _logger = logger;
