@@ -26,6 +26,8 @@
 - Testes em todas as camadas
 - AutoMapper
 - Miniprofiler
+- CI/CD
+    - GitHub Actions (?)
 - Docker (?)
 - Azure (?)
 
