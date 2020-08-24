@@ -37,6 +37,7 @@
 	- No cmd, na pasta do projeto Investimentos.Infra.Data: <code>dotnet ef database update -s ../Investimentos.Web</code> (ou Investimentos.Api)
 
 ## Referências de artigos
+- https://itnext.io/creating-an-application-from-scratch-using-net-core-and-angular-part-1-d1c66733c57d
 - https://medium.com/swlh/building-a-nice-multi-layer-net-core-3-api-c68a9ef16368
 - https://maiconheck.com/domain-driven-design-do-inicio-ao-codigo/
 - https://medium.com/@ericandrade_24404/parte-01-criando-arquitetura-em-camadas-com-ddd-inje%C3%A7%C3%A3o-de-dep-ef-60b851c88461
