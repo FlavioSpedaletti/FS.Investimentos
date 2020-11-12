@@ -1,7 +1,10 @@
 <mat-toolbar class="footer">
+    <ul>
+        <li *myFor="let n em [1, 2, 3]">{{ n }}</li>
+    </ul>
     <span>
         Desenvolvido com
-        <i class="material-icons red v-middle">
+        <i class="material-icons v-middle" appRed>
             favorite
         </i>
         por <strong>Flavio Spedaletti</strong>
