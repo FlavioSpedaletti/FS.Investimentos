@@ -44,6 +44,7 @@ namespace Investimentos.Service.Api
             services.AddSingleton(mapper);
 
             services.AddControllers();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +60,10 @@ namespace Investimentos.Service.Api
             app.UseRouting();
 
             app.UseAuthorization();
+
+            string[] origins = new string[] { "http://localhost:4200" };
+            app.UseCors(option => option.AllowAnyMethod().AllowAnyHeader().WithOrigins(origins));
+            // app.UseCors(option => option.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin());
 
             app.UseEndpoints(endpoints =>
             {
