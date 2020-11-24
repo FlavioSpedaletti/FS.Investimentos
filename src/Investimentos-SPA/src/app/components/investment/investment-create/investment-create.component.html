@@ -1,7 +1,27 @@
-<button mat-raised-button (click)="createInvestment()" color="primary">
-    Salvar
-</button>
-
-<button mat-raised-button (click)="cancel()">
-    Cancelar
-</button>
+<mat-card>
+    <mat-card-title>Novo Produto</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Tipo" [(ngModel)]="investment.tipoRendaVariavel" name="tipoRendaVariavel" type="number" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Nome pregão" [(ngModel)]="investment.nomePregao" name="nomePregao" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cód. negociação" [(ngModel)]="investment.codigoNegociacao" name="codigoNegociacao" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CNPJ" [(ngModel)]="investment.cnpj" name="cnpj">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Site" [(ngModel)]="investment.site" name="site">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="createInvestment()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

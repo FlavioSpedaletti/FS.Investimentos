@@ -11,9 +11,9 @@ import { InvestmentService } from '../investment.service';
 export class InvestmentCreateComponent implements OnInit {
 
   investment: Investment = {
-    nomePregao: 'teste',
-    codigoNegociacao: 'test3',
-    tipoRendaVariavel: 1,
+    tipoRendaVariavel: null,
+    nomePregao: 'B3',
+    codigoNegociacao: '',
     cnpj: '',
     site: ''
   };
