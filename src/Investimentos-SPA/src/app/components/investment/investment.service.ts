@@ -24,4 +24,8 @@ export class InvestmentService {
   create(investment: Investment): Observable<Investment> {
     return this.http.post<Investment>(this.baseUrl, investment);
   }
+
+  read(): Observable<Investment[]> {
+    return this.http.get<Investment[]>(this.baseUrl);
+  }
 }

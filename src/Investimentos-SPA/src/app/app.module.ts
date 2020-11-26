@@ -25,6 +25,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { InvestmentReadComponent } from './components/investment/investment-read/investment-read.component';
+import { InvestmentRead2Component } from './components/investment/investment-read2/investment-read2.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,9 @@ import { MatInputModule } from '@angular/material/input';
     InvestmentCrudComponent,
     RedDirective,
     ForDirective,
-    InvestmentCreateComponent
+    InvestmentCreateComponent,
+    InvestmentReadComponent,
+    InvestmentRead2Component
   ],
   imports: [
     BrowserModule,
@@ -51,7 +58,10 @@ import { MatInputModule } from '@angular/material/input';
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
