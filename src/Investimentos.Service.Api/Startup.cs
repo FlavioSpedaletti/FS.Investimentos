@@ -1,19 +1,17 @@
 using AutoMapper;
-using Investimentos.Domain.Entities;
 using Investimentos.Domain.Interfaces.Repositories;
 using Investimentos.Domain.Interfaces.Services;
 using Investimentos.Domain.Services;
 using Investimentos.Infra.Data.Contexts;
 using Investimentos.Infra.Data.Repositories;
 using Investimentos.Service.Api.AutoMapper;
-using Investimentos.Service.Api.DTOs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
+using Microsoft.Extensions.Logging;
 
 namespace Investimentos.Service.Api
 {
@@ -30,7 +28,8 @@ namespace Investimentos.Service.Api
         public void ConfigureServices(IServiceCollection services)
         {
             var connection = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<EFContext>(options => options.UseMySql(connection));
+            services.AddDbContext<EFContext>(options => options.UseMySql(connection)
+                    .UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole())));
             services.AddScoped<IAtivoRendaVariavelService, AtivoRendaVariavelService>();
             services.AddScoped<IAtivoRendaVariavelRepository, AtivoRendaVariavelRepository>();
 

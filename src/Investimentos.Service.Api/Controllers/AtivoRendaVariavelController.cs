@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using Investimentos.Domain.Entities;
 using Investimentos.Domain.Interfaces.Services;
 using Investimentos.Service.Api.DTOs;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -18,6 +13,7 @@ namespace Investimentos.Service.Api.Controllers
     {
         public AtivoRendaVariavelController(ILogger<AtivoRendaVariavelController> logger, IAtivoRendaVariavelService ativoRendaVariavelService, IMapper mapper) : base(logger, ativoRendaVariavelService, mapper)
         {
+            logger.LogCritical("entrou no ctor");
         }
 
         //public AtivoRendaVariavelController(ILogger<AtivoRendaVariavelController> logger, IAtivoRendaVariavelService ativoRendaVariavelService, IMapper mapper)

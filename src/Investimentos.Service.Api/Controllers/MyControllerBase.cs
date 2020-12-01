@@ -16,11 +16,11 @@ namespace Investimentos.Service.Api.Controllers
         where Entity : EntityBase
         where EntityDTO : DTOBase
     {
-        private readonly ILogger<AtivoRendaVariavelController> _logger;
+        private readonly ILogger _logger;
         private readonly IServiceBase<Entity> _service;
         private readonly IMapper _mapper;
 
-        public MyControllerBase(ILogger<AtivoRendaVariavelController> logger, IServiceBase<Entity> service, IMapper mapper)
+        public MyControllerBase(ILogger logger, IServiceBase<Entity> service, IMapper mapper)
         {
             _logger = logger;
             _service = service;
