@@ -63,7 +63,9 @@ namespace Investimentos.Service.Api.Controllers
             try
             {
                 var entity = _mapper.Map<Entity>(entityDTO);
-                return new OkObjectResult(_service.Insert(entity));
+                var entityId = _service.Insert(entity);
+
+                return new OkObjectResult(entityId);
             }
             catch (Exception ex)
             {

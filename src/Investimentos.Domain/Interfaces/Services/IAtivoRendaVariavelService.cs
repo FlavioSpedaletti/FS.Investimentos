@@ -4,5 +4,6 @@ namespace Investimentos.Domain.Interfaces.Services
 {
     public interface IAtivoRendaVariavelService : IServiceBase<AtivoRendaVariavel>
     {
+        public void MetodoComMaisDeUmaTransacao();
     }
 }

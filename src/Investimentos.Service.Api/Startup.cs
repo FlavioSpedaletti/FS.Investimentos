@@ -1,9 +1,11 @@
 using AutoMapper;
 using Investimentos.Domain.Interfaces.Repositories;
 using Investimentos.Domain.Interfaces.Services;
+using Investimentos.Domain.Interfaces.UOW;
 using Investimentos.Domain.Services;
 using Investimentos.Infra.Data.Contexts;
 using Investimentos.Infra.Data.Repositories;
+using Investimentos.Infra.Data.UOW;
 using Investimentos.Service.Api.AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,6 +34,7 @@ namespace Investimentos.Service.Api
                     .UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole())));
             services.AddScoped<IAtivoRendaVariavelService, AtivoRendaVariavelService>();
             services.AddScoped<IAtivoRendaVariavelRepository, AtivoRendaVariavelRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             // Auto Mapper Configurations
             var mappingConfig = new MapperConfiguration(mc =>

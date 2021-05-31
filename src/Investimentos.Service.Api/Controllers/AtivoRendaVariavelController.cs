@@ -11,17 +11,24 @@ namespace Investimentos.Service.Api.Controllers
     [ApiController]
     public class AtivoRendaVariavelController : MyControllerBase<AtivoRendaVariavel, AtivoRendaVariavelDTO>
     {
+        private readonly ILogger<AtivoRendaVariavelController> _logger;
+        private readonly IAtivoRendaVariavelService _ativoRendaVariavelService;
+        private readonly IMapper _mapper;
+
         public AtivoRendaVariavelController(ILogger<AtivoRendaVariavelController> logger, IAtivoRendaVariavelService ativoRendaVariavelService, IMapper mapper) : base(logger, ativoRendaVariavelService, mapper)
         {
-            logger.LogCritical("entrou no ctor");
+            _logger = logger;
+            _ativoRendaVariavelService = ativoRendaVariavelService;
+            _mapper = mapper;
+            
+            _logger.LogCritical("entrou no ctor");
         }
 
-        //public AtivoRendaVariavelController(ILogger<AtivoRendaVariavelController> logger, IAtivoRendaVariavelService ativoRendaVariavelService, IMapper mapper)
-        //{
-        //    _logger = logger;
-        //    _ativoRendaVariavelService = ativoRendaVariavelService;
-        //    _mapper = mapper;
-        //}
+        [Route("MetodoComMaisDeUmaTransacao")]
+        public void MetodoComMaisDeUmaTransacao()
+        {
+            _ativoRendaVariavelService.MetodoComMaisDeUmaTransacao();
+        }
 
         //[HttpGet]
         //public IEnumerable<AtivoRendaVariavelDTO> Get()

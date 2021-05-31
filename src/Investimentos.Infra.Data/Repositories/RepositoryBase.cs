@@ -19,7 +19,6 @@ namespace Investimentos.Infra.Data.Repositories
         public void Update(T entity)
         {
             _ctx.Entry(entity).State = EntityState.Modified;
-            _ctx.SaveChanges(); //fere UOW, precisa melhorar
         }
 
         public void Delete(int id)
@@ -28,21 +27,18 @@ namespace Investimentos.Infra.Data.Repositories
             if (entity != null)
             {
                 _ctx.Set<T>().Remove(entity);
-                _ctx.SaveChanges(); //fere UOW, precisa melhorar
             }
         }
 
         public void Delete(T entity)
         {
             _ctx.Set<T>().Remove(entity);
-            _ctx.SaveChanges(); //fere UOW, precisa melhorar
         }
 
-        public int Insert(T entity)
+        public void Insert(T entity)
         {
             //_ctx.Set<T>().Add(entity).Entity.Id;
             _ctx.Set<T>().Add(entity);
-            return _ctx.SaveChanges(); //fere UOW, precisa melhorar
         }
 
         public T GetById(int id)

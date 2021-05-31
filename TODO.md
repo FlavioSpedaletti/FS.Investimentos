@@ -5,7 +5,6 @@
 - usar o _logger 
 
 ## Data / Repository
-- uow => https://www.youtube.com/watch?v=HdsRpSK4PUg
 - ReadOnlyRepository (Dapper)
 - LightDBContext (AsNoTracking) => https://khalidabuhakmeh.com/improve-entity-framework-core-performance
 
