@@ -29,7 +29,7 @@ namespace Investimentos.Service.Api.Controllers
 
         [HttpGet]
         [Route("")]
-        public IActionResult Get()
+        public virtual IActionResult Get()
         {
             try
             {
@@ -44,7 +44,7 @@ namespace Investimentos.Service.Api.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        public IActionResult GetById(int id)
+        public virtual IActionResult GetById(int id)
         {
             try
             {
@@ -58,7 +58,7 @@ namespace Investimentos.Service.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Insert([FromBody] EntityDTO entityDTO)
+        public virtual IActionResult Insert([FromBody] EntityDTO entityDTO)
         {
             try
             {
@@ -74,7 +74,7 @@ namespace Investimentos.Service.Api.Controllers
         }
 
         [HttpPut]
-        public IActionResult Update([FromBody] EntityDTO entityDTO)
+        public virtual IActionResult Update([FromBody] EntityDTO entityDTO)
         {
             try
             {
@@ -90,7 +90,7 @@ namespace Investimentos.Service.Api.Controllers
 
         [HttpDelete]
         [Route("{id}")]
-        public IActionResult Delete(int id)
+        public virtual IActionResult Delete(int id)
         {
             try
             {

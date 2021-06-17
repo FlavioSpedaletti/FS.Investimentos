@@ -18,12 +18,12 @@ namespace Investimentos.Service.Api
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                // Para sobrescrever os logs que vem por padrão
-                // .ConfigureLogging(logging =>
-                // {
-                //     logging.ClearProviders();
-                //     logging.AddDebug();
-                // })
+                //Para sobrescrever os logs que vem por padrão
+                //.ConfigureLogging(logging =>
+                //{
+                //    logging.ClearProviders();
+                //    logging.AddDebug();
+                //})
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();

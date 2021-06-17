@@ -4,6 +4,8 @@ using Investimentos.Domain.Interfaces.Services;
 using Investimentos.Service.Api.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
 
 namespace Investimentos.Service.Api.Controllers
 {
@@ -22,6 +24,28 @@ namespace Investimentos.Service.Api.Controllers
             _mapper = mapper;
             
             _logger.LogCritical("entrou no ctor");
+        }
+
+        [HttpGet]
+        [Route("")]
+        public override IActionResult Get()
+        {
+            try
+            {
+                var id1 = _mapper.Map<AtivoRendaVariavelDTO>(_ativoRendaVariavelService.GetById(1));
+                var id2 = _mapper.Map<AtivoRendaVariavelDTO>(_ativoRendaVariavelService.GetById(2));
+                //não vai no banco novamente
+                var id1Again = _mapper.Map<AtivoRendaVariavelDTO>(_ativoRendaVariavelService.GetById(1));
+
+                //vai no banco, mas só pra pegar os ids diferentes dos já trackeados anteriormente (1 e 2)
+                var entities = _mapper.Map<IEnumerable<AtivoRendaVariavelDTO>>(_ativoRendaVariavelService.Get());
+
+                return new OkObjectResult(entities);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [Route("MetodoComMaisDeUmaTransacao")]
