@@ -13,45 +13,45 @@ namespace Investimentos.Infra.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.5")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+                .HasAnnotation("Relational:MaxIdentifierLength", 64)
+                .HasAnnotation("ProductVersion", "3.1.5");
 
             modelBuilder.Entity("Investimentos.Domain.Entities.AtivoRendaVariavel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnName("Id")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
 
                     b.Property<string>("CNPJ")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnName("CNPJ")
-                        .HasColumnType("varchar(14) CHARACTER SET utf8mb4")
-                        .HasMaxLength(14);
+                        .HasMaxLength(14)
+                        .HasColumnType("varchar(14)")
+                        .HasColumnName("CNPJ");
 
                     b.Property<string>("CodigoNegociacao")
                         .IsRequired()
-                        .HasColumnName("CodigoNegociacao")
-                        .HasColumnType("varchar(100) CHARACTER SET utf8mb4")
-                        .HasMaxLength(100);
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)")
+                        .HasColumnName("CodigoNegociacao");
 
                     b.Property<string>("NomePregao")
                         .IsRequired()
-                        .HasColumnName("NomePregao")
-                        .HasColumnType("varchar(100) CHARACTER SET utf8mb4")
-                        .HasMaxLength(100);
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)")
+                        .HasColumnName("NomePregao");
 
                     b.Property<string>("Site")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnName("Site")
-                        .HasColumnType("varchar(50) CHARACTER SET utf8mb4")
-                        .HasMaxLength(50);
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("Site");
 
                     b.Property<int>("TipoRendaVariavel")
-                        .HasColumnName("TipoRendaVariavel")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("TipoRendaVariavel");
 
                     b.HasKey("Id");
 
