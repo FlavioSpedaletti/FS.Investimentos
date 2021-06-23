@@ -1,6 +1,9 @@
 # FS.Investimentos
 ## Rastreador de valores de cotas de ações e FIIs e dashboard pessoal de performance de investimentos.
 
+- https://br.tradingview.com/
+- https://statusinvest.com.br/
+
 [![Build status](https://ci.appveyor.com/api/projects/status/frnkwy8w0s9cdpr7?svg=true)](https://ci.appveyor.com/project/FlavioSpedaletti/fs-investimentos) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=FlavioSpedaletti_FS.Investimentos&metric=alert_status)](https://sonarcloud.io/dashboard?id=FlavioSpedaletti_FS.Investimentos) [![Issues](https://img.shields.io/github/issues/FlavioSpedaletti/FS.Investimentos.svg)](https://huboard.com/FlavioSpedaletti/FS.Investimentos)
 
 ## Stack
