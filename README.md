@@ -31,6 +31,7 @@
 - Miniprofiler
 - CI/CD
     - GitHub Actions (?)
+    - SonarQube
 - Docker (?)
 - Azure (?)
 
